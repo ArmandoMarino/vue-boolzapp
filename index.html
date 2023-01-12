@@ -41,7 +41,10 @@
                         <div id="contacts-list">
                             <input type="text">
                             <ul>
-                                <li>prendere dai data e fare v-for</li>
+                                <li v-for="(contact, i) in contacts">
+                                    <img id="img-user" class="img-fluid" :src="contacts.avatar" alt="">
+                                    <span>{{ contacts.name }}</span>
+                                </li>
                             </ul>
                         </div>
                     </div>

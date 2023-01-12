@@ -4,6 +4,7 @@ console.log(Vue + "Vue OK");
 const app = Vue.createApp({
     data() {
         return{
+            currentIndex : 0,
             contacts: [
                 {
                   name: 'Michele',
@@ -84,7 +85,8 @@ const app = Vue.createApp({
                   }
                   ],
                 },
-              ]
+              ],
+
         }
     },
   });
