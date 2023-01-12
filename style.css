@@ -57,30 +57,33 @@ div[class*='col-']{
     overflow-y: auto;
 }
 
+.date{
+    font-size: 10px;
+    text-align:right;
+    color: #c2cdbb;
+}
 
-.message{
+.sent{
+    background-color: #d5f9ba;
+    position: relative;
+    left: 65%;
     width: 250px;
     min-height:0px;
     margin: 10px;
     border-radius: 10px;
     position: relative;
-    
-    display: flex;
-    justify-content: left;
-    align-items: center;
     padding: 10px;
 }
 
 
 .received{
-    background-color: #d5f9ba;
-    position: relative;
-    left: 65%;
-}
-
-
-.sent{
     background-color: white;
     position: relative;
     left: 6%;
+    width: 250px;
+    min-height:0px;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    padding: 10px;
 }

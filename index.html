@@ -62,9 +62,11 @@
                             </div>
                         </div>
 
+                        <!--todo AUMENTANDO IL CURRENT INDEX CAMBIA LA CHAT -->
                         <div id="chat" class="current-chat">
-                            <div v-for="(message, i) in contacts[currentIndex].messages" class="message received">
+                            <div v-for="(message, i) in contacts[currentIndex].messages" :class="message.status">
                                 <p>{{message.text}}</p>
+                                <p class="date">{{message.date}}</p>
                             </div>
                             
                         </div>
