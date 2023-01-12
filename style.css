@@ -5,13 +5,21 @@ body{
     height: 100vh;
 }
 
+#root .row{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+p{
+    margin: 0;
+}
+
 div[class*='col-']{
     padding: 0;
 }
 
 .panel{
     background-color: #eaeaea;
-    height: 60px;
+    height: 70px;
 }
 
 
@@ -20,6 +28,10 @@ div[class*='col-']{
     width: 50px;
     height: 50px;
     border-radius: 50px;
+}
+
+.to-border{
+    border-right: 2px solid #8383eb;
 }
 
 #notification-panel{
@@ -31,4 +43,39 @@ div[class*='col-']{
     height: 500px;
     background-color: #ffffff;
     overflow-y: auto;
+}
+
+/* CURRENT-CHAT */
+#chat{
+    height: 570px;
+    background-image: url(img/mine.jpg) ;
+    overflow-y: auto;
+}
+
+
+.message{
+    width: 250px;
+    min-height:0px;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.received{
+    background-color: #d5f9ba;
+    position: relative;
+    left: 65%;
+}
+
+
+.sent{
+    background-color: white;
+    position: relative;
+    left: 6%;
 }
