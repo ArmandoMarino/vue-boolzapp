@@ -26,7 +26,7 @@
                         <!-- USER-PANEL -->
                         <div id="user-panel" class="panel d-flex justify-content-between p-1">
                             <div class="left-panel">
-                                <img id="img-user" class="img-fluid" src="img/avatar_io.jpg" alt="">
+                                <img id="" class="img-fluid img-user" src="img/avatar_io.jpg" alt="">
                                 <span>Nome Utente</span>
                             </div>
                             <div class="right-panel">
@@ -42,8 +42,8 @@
                             <input type="text">
                             <ul>
                                 <li v-for="(contact, i) in contacts">
-                                    <img id="img-user" class="img-fluid" :src="contacts.avatar" alt="">
-                                    <span>{{ contacts.name }}</span>
+                                    <img id="" class="img-fluid img-user" :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
+                                    <span>{{ contact.name }}</span>
                                 </li>
                             </ul>
                         </div>
@@ -54,7 +54,7 @@
                     <div class="col-8">
                         <div class="panel d-flex justify-content-between p-1">
                             <div class="left-panel">
-                                <img id="img-user" class="img-fluid" src="img/avatar_io.jpg" alt="">
+                                <img id="" class="img-fluid img-user" src="img/avatar_1.jpg" alt="">
                                 <span>Nome Utente</span>
                             </div>
                             <div class="right-panel">

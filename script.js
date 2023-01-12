@@ -86,6 +86,11 @@ const app = Vue.createApp({
                   ],
                 },
               ],
+            methods:{
+                getImgUrl(pic) {
+                    return require('../img/'+ this.contacts.avatar)
+                }
+            }  
 
         }
     },
