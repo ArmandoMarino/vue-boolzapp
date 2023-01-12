@@ -42,7 +42,7 @@
                             <input type="text">
                             <ul>
                                 <li v-for="(contact, i) in contacts">
-                                    <img id="" class="img-fluid img-user" :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
+                                    <img id="" class="img-fluid img-user m-2" :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                                     <span>{{ contact.name }}</span>
                                 </li>
                             </ul>
@@ -63,15 +63,10 @@
                         </div>
 
                         <div id="chat" class="current-chat">
-                            <div class="message received">
-                                <p>Hai portato a spasso il cane?</p>
+                            <div v-for="(message, i) in contacts[currentIndex].messages" class="message received">
+                                <p>{{message.text}}</p>
                             </div>
-                            <div class="message received">
-                                <p>Ricordati di dargli da mangiare</p>
-                            </div>
-                            <div class="message sent">
-                                <p>Tutto fatto!</p>
-                            </div>
+                            
                         </div>
                     </div>
 
