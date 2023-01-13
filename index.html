@@ -55,7 +55,7 @@
                             </div>
 
                             <ul>
-                                <li v-for="(contact, i) in filteredItem" @click="changeChat(i)" role="button">
+                                <li v-for="(contact, i) in filteredItem" @click="changeChat(i)" role="button" tabindex="-1" class="selected">
                                     <img id="" class="img-fluid img-user m-2" :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                                     <span>{{ contact.name }}</span>
                                 </li>

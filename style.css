@@ -15,7 +15,7 @@ p{
 
 ul{
     list-style-type: none;
-    padding-left: 10px;
+    padding-left: 0px;
 }
 
 div[class*='col-']{
@@ -80,6 +80,13 @@ div[class*='col-']{
     height: 500px;
     background-color: #ffffff;
     overflow-y: auto;
+}
+
+.selected{
+    background-color: transparent;
+}
+.selected:focus {
+    background-color: #e9ebeb;
 }
 
 /* CURRENT-CHAT */
