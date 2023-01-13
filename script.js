@@ -1,6 +1,8 @@
 console.log('JS OK');
 console.log(Vue + "Vue OK");
 
+var dt = luxon.DateTime;
+
 const app = Vue.createApp({
     data() {
         return{
@@ -97,13 +99,17 @@ const app = Vue.createApp({
         changeChat(index){
             this.currentIndex = index
         },
+        getCurrentMoment(){
+            return dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+        },
         sendMessage(index){
             if (this.myMessage !== ''){
-            this.contacts[index].messages.push({ date: new Date(), text: this.myMessage, status: 'sent'});
+            this.contacts[index].messages.push({ date: this.getCurrentMoment(), text: this.myMessage, status: 'sent'});
             this.myMessage = '';
             }
         },
         
+
     }  
   });
   
