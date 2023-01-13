@@ -41,7 +41,7 @@
                         <div id="contacts-list">
                             <input type="text">
                             <ul>
-                                <li v-for="(contact, i) in contacts">
+                                <li v-for="(contact, i) in contacts" @click="changeChat(i)" role="button">
                                     <img id="" class="img-fluid img-user m-2" :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                                     <span>{{ contact.name }}</span>
                                 </li>

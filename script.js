@@ -90,12 +90,13 @@ const app = Vue.createApp({
                   ],
                 },
               ],
-            methods:{
-                // goToThisChat
-            }  
-
         }
     },
+    methods:{
+        changeChat(index){
+            this.currentIndex = index
+        },
+    }  
   });
   
   
