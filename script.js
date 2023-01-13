@@ -99,7 +99,7 @@ const app = Vue.createApp({
     computed:{
         filteredItem(){
            const searchedWord = this.searchItem;
-           return this.contacts.filter(contact => contact.name.includes(searchedWord));
+           return this.contacts.filter(contact => contact.name.toLowerCase().includes(searchedWord));
         }
     },
     methods:{
