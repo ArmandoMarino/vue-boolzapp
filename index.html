@@ -80,7 +80,7 @@
                                     <span><i class="fa-regular fa-2xl fa-face-smile"></i></span>
                                 </div>
                                 <div class="message-to flex-grow-1">
-                                    <input class="w-100" type="text-area">
+                                    <input class="w-100" placeholder="Scrivi un messaggio" type="text-area" v-model="myMessage" @keyup.enter="sendMessage(currentIndex)">
                                 </div>
                                 <div class="rec p-3" role="button">
                                     <span><i class="fa-solid fa-2xl fa-microphone"></i></span>

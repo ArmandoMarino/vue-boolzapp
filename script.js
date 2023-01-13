@@ -5,6 +5,7 @@ const app = Vue.createApp({
     data() {
         return{
             currentIndex : 0,
+            myMessage : '',
             user: {
                 name: 'Armando Marino',
                 avatar: '_io'
@@ -96,6 +97,13 @@ const app = Vue.createApp({
         changeChat(index){
             this.currentIndex = index
         },
+        sendMessage(index){
+            if (this.myMessage !== ''){
+            this.contacts[index].messages.push({ date: new Date(), text: this.myMessage, status: 'sent'});
+            this.myMessage = '';
+            }
+        },
+        
     }  
   });
   
