@@ -8,6 +8,7 @@ const app = Vue.createApp({
         return{
             currentIndex : 0,
             myMessage : '',
+            searchItem : '',
             user: {
                 name: 'Armando Marino',
                 avatar: '_io'
@@ -93,6 +94,12 @@ const app = Vue.createApp({
                   ],
                 },
               ],
+        }
+    },
+    computed:{
+        filteredItem(){
+           const searchedWord = this.searchItem;
+           return this.contacts.filter(contact => contact.name.includes(searchedWord));
         }
     },
     methods:{

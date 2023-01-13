@@ -44,11 +44,11 @@
                             <!-- SEARCH CONTACTS -->
                             <div class="input-group mb-3 p-1">
                                 <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Cerca o inizia una nuova chat" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control" v-model="searchItem" placeholder="Cerca o inizia una nuova chat" aria-label="Cerca o inizia una nuova chat" aria-describedby="basic-addon1">
                             </div>
 
                             <ul>
-                                <li v-for="(contact, i) in contacts" @click="changeChat(i)" role="button">
+                                <li v-for="(contact, i) in filteredItem" @click="changeChat(i)" role="button">
                                     <img id="" class="img-fluid img-user m-2" :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                                     <span>{{ contact.name }}</span>
                                 </li>
