@@ -64,6 +64,18 @@ div[class*='col-']{
     color: #8edafc;
 }
 
+.notification-app{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.desktop-app{
+    font-size: 14px;
+    color: gray;
+}
+
+/* CONTACT-LIST */
+
 #contacts-list{
     height: 500px;
     background-color: #ffffff;
