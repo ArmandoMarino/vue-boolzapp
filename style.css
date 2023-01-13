@@ -22,6 +22,11 @@ div[class*='col-']{
     padding: 0;
 }
 
+.form-control:focus {
+    box-shadow: none;
+}
+
+/* MAIN */
 .panel{
     background-color: #eaeaea;
     height: 70px;
@@ -86,4 +91,19 @@ div[class*='col-']{
     border-radius: 10px;
     position: relative;
     padding: 10px;
+}
+
+/* MESSAGE-INPUT */
+.message-panel{
+   height: 80px;
+   z-index: 1;
+   background-color: #eaeaea;
+}
+
+.message-panel:last-of-type {
+    margin-top: auto;
+  }
+
+.fa-2xl{
+    color: #6b7376;
 }

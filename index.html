@@ -27,7 +27,7 @@
                         <div id="user-panel" class="panel d-flex justify-content-between p-1">
                             <div class="left-panel">
                                 <img id="" class="img-fluid img-user" src="img/avatar_io.jpg" alt="">
-                                <span>Nome Utente</span>
+                                <span>{{user.name}}</span>
                             </div>
                             <div class="right-panel">
                                 TRE ICONE
@@ -39,7 +39,12 @@
                         </div>
                         <!-- CONTACTS-LIST -->
                         <div id="contacts-list">
-                            <input type="text">
+                            <!-- SEARCH CONTACTS -->
+                            <div class="input-group mb-3 p-1">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Cerca o inizia una nuova chat" aria-describedby="basic-addon1">
+                            </div>
+
                             <ul>
                                 <li v-for="(contact, i) in contacts" @click="changeChat(i)" role="button">
                                     <img id="" class="img-fluid img-user m-2" :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
@@ -62,14 +67,29 @@
                             </div>
                         </div>
 
-                        <!--todo AUMENTANDO IL CURRENT INDEX CAMBIA LA CHAT -->
-                        <div id="chat" class="current-chat">
+                        <!-- MESSAGES -->
+                        <div id="chat" class="current-chat d-flex flex-column flex-shrink-0">
                             <div v-for="(message, i) in contacts[currentIndex].messages" :class="message.status">
                                 <p>{{message.text}}</p>
                                 <p class="date">{{message.date}}</p>
                             </div>
-                            
+
+                            <!-- MESSAGE-INPUT -->
+                            <div class="message-panel w-100 d-flex justify-content-center align-items-center">
+                                <div class="emoji p-3" role="button">
+                                    <span><i class="fa-regular fa-2xl fa-face-smile"></i></span>
+                                </div>
+                                <div class="message-to flex-grow-1">
+                                    <input class="w-100" type="text-area">
+                                </div>
+                                <div class="rec p-3" role="button">
+                                    <span><i class="fa-solid fa-2xl fa-microphone"></i></span>
+                                </div>
+                            </div>
                         </div>
+
+                        
+                        
                     </div>
 
                 </div>
