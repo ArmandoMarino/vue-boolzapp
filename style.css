@@ -44,9 +44,24 @@ div[class*='col-']{
     border-right: 2px solid #8383eb;
 }
 
+/* NOTIFICATION-PANEL */
 #notification-panel{
     background-color: #8edafc;
     height: 70px;
+}
+
+.img-bell{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+#notification-panel .fa-bell-slash{
+    position: relative;
+    right: 0;
+    top: 10px;
+    color: #8edafc;
 }
 
 #contacts-list{
@@ -105,5 +120,9 @@ div[class*='col-']{
   }
 
 .fa-2xl{
+    color: #6b7376;
+}
+
+.fa-xl{
     color: #6b7376;
 }

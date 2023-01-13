@@ -31,13 +31,15 @@
                                 <img id="" class="img-fluid img-user" src="img/avatar_io.jpg" alt="">
                                 <span>{{user.name}}</span>
                             </div>
-                            <div class="right-panel">
-                                TRE ICONE
+                            <div class="right-panel d-flex">
+                                <span class="p-3"><i class="fa-solid fa-circle-notch fa-xl"></i></span>
+                                <span class="p-3"><i class="fa-regular fa-message fa-xl"></i></span>
+                                <span class="p-3"><i class="fa-solid fa-ellipsis-vertical fa-xl"></i></span>
                             </div>
                         </div>
                         <!-- NOTIFICATION-PANEL -->
-                        <div id="notification-panel">
-                            ICONA e SCRITTE
+                        <div id="notification-panel" class="d-flex align-items-center ps-2">
+                            <span class="img-bell text-center"><i class="fa-solid fa-bell-slash fa-xl"></i></span>
                         </div>
                         <!-- CONTACTS-LIST -->
                         <div id="contacts-list">
@@ -64,8 +66,10 @@
                                 <img id="" class="img-fluid img-user" :src="'img/avatar' + contacts[currentIndex].avatar + '.jpg'" :alt="contacts[currentIndex].name">
                                 <span>{{contacts[currentIndex].name}}</span>
                             </div>
-                            <div class="right-panel">
-                                TRE ICONE
+                            <div class="right-panel d-flex">
+                                <span class="p-3"><i class="fa-solid fa-magnifying-glass fa-xl"></i></span>
+                                <span class="p-3"><i class="fa-solid fa-paperclip fa-xl"></i></span>
+                                <span class="p-3"><i class="fa-solid fa-ellipsis-vertical fa-xl"></i></span>
                             </div>
                         </div>
 
