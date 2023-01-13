@@ -5,6 +5,10 @@ const app = Vue.createApp({
     data() {
         return{
             currentIndex : 0,
+            user: {
+                name: 'Nome Utente',
+                avatar: '_io'
+              },
             contacts: [
                 {
                   name: 'Michele',
@@ -87,9 +91,7 @@ const app = Vue.createApp({
                 },
               ],
             methods:{
-                getImgUrl(pic) {
-                    return require('../img/'+ this.contacts.avatar)
-                }
+                // goToThisChat
             }  
 
         }
