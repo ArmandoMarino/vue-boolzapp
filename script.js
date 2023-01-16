@@ -114,6 +114,11 @@ const app = Vue.createApp({
             this.contacts[index].messages.push({ date: this.getCurrentMoment(), text: this.myMessage, status: 'sent'});
             this.myMessage = '';
             }
+
+            setTimeout(()=>{
+              this.contacts[index].messages.push({ date: this.getCurrentMoment(), text: 'ok', status: 'received'});
+            },1000);
+
         },
         
 
